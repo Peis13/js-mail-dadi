@@ -1,11 +1,12 @@
-// ESERCIZIO EMAIL
+//          ESERCIZIO EMAIL
+
 // INPUT
 var email = ['francesco@gmail.com', 'andrea@libero.it', 'nico.paganelli91@gmail.com', 'anna@gmail.it'];
 var emailUtente = document.getElementById('email');
 
 // BOTTONI
 var conferma = document.getElementById('conferma');
-var reset = document.getElementById('reset');
+var annulla = document.getElementById('annulla');
 
 // OUTPUT
 var messaggio = document.getElementById('alert');
@@ -49,11 +50,66 @@ conferma.addEventListener('click',
   }
 )
 
-// RESET
-reset.addEventListener('click',
+// ANNULLA
+annulla.addEventListener('click',
   function () {
     emailUtente.value = '';
     messaggio.innerHTML = '';
   }
 )
-// FINE ESERCIZIO EMAIL
+//          FINE ESERCIZIO EMAIL
+
+//          ESERCIZIO DADI
+
+// BOTTONI
+var gioca = document.getElementById('gioca');
+var reset = document.getElementById('reset');
+
+// OUTPUT
+var user = document.getElementById('user');
+var bot = document.getElementById('bot');
+var vincitore = document.getElementById('vincitore');
+
+// GIOCA
+gioca.addEventListener('click',
+  function() {
+
+    // Genero un numero casuale da 1-6 per l'user e per il computer
+    var numUser = (Math.floor(Math.random() * 6) + 1);
+    var numBot = (Math.floor(Math.random() * 6) + 1);
+
+    // Associo i numeri generati all'user e al computer
+    user.innerHTML = numUser;
+    bot.innerHTML = numBot;
+
+    // LOGICA
+    // Controllo il numero più alto
+    if ( numUser > numBot ) {
+
+      // Numero utente più alto
+      vincitore.innerHTML = 'Tu';
+
+    } else if ( numUser < numBot ) {
+
+      // Numero computer più alto
+      vincitore.innerHTML = 'Computer';
+
+    } else {
+
+      // Pareggio
+      vincitore.innerHTML = 'Pareggio';
+    }
+  }
+)
+
+// RESET
+reset.addEventListener('click',
+  function() {
+
+    // Azzeramento valori
+    user.innerHTML = '';
+    bot.innerHTML = '';
+    vincitore.innerHTML = '';
+  }
+)
+//          FINE ESERCIZIO DADI

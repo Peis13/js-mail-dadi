@@ -12,7 +12,7 @@
 
       <!-- MAIL -->
       <section id="mail">
-        <h1>MAIL</h1>
+        <h2>MAIL</h2>
 
         <!-- Input -->
         <div class="input">
@@ -22,20 +22,41 @@
           <input id="email" type="text" placeholder="Inserisci la tua mail">
 
           <!-- Conferma / Reset -->
-          <button id="conferma" type="button" name="conferma">Conferma la tua mail</button>
-          <button id="reset" type="button" name="reset">Reset</button>
+          <button id="conferma" type="button">Conferma la tua mail</button>
+          <button id="annulla" type="button">Annulla</button>
         </div>
 
         <div class="messaggio">
-          <p id="alert"></p>
+          <span id="alert"></span>
         </div>
         <!-- Fine Input -->
       </section>
       <!-- FINE MAIL -->
 
+      <hr>
+
       <!-- DADI -->
       <section id="dadi">
+        <h2>DADI</h2>
 
+        <!-- Gioca -->
+        <div class="gioca">
+          <button id="gioca" type="button">Gioca</button>
+          <button id="reset" type="button">Reset</button>
+        </div>
+
+        <!-- User -->
+        <div class="user">
+          <p>Numero utente: <span id="user"></span></p>
+        </div>
+
+        <!-- Bot -->
+        <div class="bot">
+          <p>Numero computer: <span id="bot"></span></p>
+        </div>
+
+        <!-- vincitore -->
+        <p>The winner is: <span id="vincitore"></span></p>
       </section>
       <!-- FINE DADI -->
     </main>

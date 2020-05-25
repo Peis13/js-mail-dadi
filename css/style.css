@@ -1,8 +1,12 @@
 /* Impostazione colore messaggio */
+#alert {
+  color: #fff;
+}
+
 .sbagliata {
-  color: red;
+  background-color: red;
 }
 
 .corretta {
-  color: green;
+  background-color: green;
 }
